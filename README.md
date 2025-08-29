@@ -18,11 +18,29 @@ Um aplicativo mobile simples e elegante para listar e visualizar suas frases e c
 
 ## 🛠️ Como Executar o Projeto
 
-Siga os passos abaixo para clonar o repositório e rodar o aplicativo em seu emulador ou dispositivo.
+Siga estas instruções para clonar o projeto e executá-lo no seu emulador ou dispositivo.
 
-### Pré-requisitos
+**Pré-requisitos**
+Antes de começar, certifique-se de que você tem o Node.js e o Expo CLI instalados em seu computador. O Expo CLI é uma ferramenta que facilita a criação e execução de projetos React Native.
 
-Certifique-se de ter o Node.js e o Expo CLI instalados em sua máquina.
+Se você ainda não os tem, instale o Expo CLI globalmente usando o npm:
 
-```sh
-npm install -g expo-cli
+**Passo a Passo**
+Clone o repositório:
+Abra seu terminal ou prompt de comando, navegue até a pasta onde deseja salvar o projeto e use o comando git clone seguido da URL do seu repositório.
+
+Entre na pasta do projeto:
+Após o download, navegue para a pasta do projeto que foi criada.
+
+Instale as dependências:
+Execute o comando npm install para baixar e instalar todas as bibliotecas e pacotes necessários para o projeto, que estão listados no arquivo package.json.
+
+Inicie o servidor de desenvolvimento:
+Agora, você pode iniciar o aplicativo. O comando npm start irá abrir o Metro Bundler, que compila o código JavaScript do projeto.
+
+Abra o aplicativo:
+O terminal exibirá um código QR. Você tem duas opções para ver seu aplicativo funcionando:
+
+No emulador: Se você já tiver um emulador de Android (como o Android Studio) ou iOS (Xcode) configurado, o Expo CLI pode abri-lo automaticamente.
+
+No seu celular: Baixe o aplicativo Expo Go da App Store (iOS) ou Google Play (Android). Abra o aplicativo e escaneie o código QR que aparece no seu terminal. O aplicativo será carregado instantaneamente no seu dispositivo.
