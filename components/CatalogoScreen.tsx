@@ -1,6 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, StatusBar, ImageBackground } from 'react-native';
-
+import { View, Text, StyleSheet, StatusBar, ImageBackground, ScrollView } from 'react-native';
 // Importa os dados do catálogo de um arquivo JSON.
 import dadosDoCatalogo from './catalogo.json';
 
@@ -9,49 +8,62 @@ interface ItemDoCatalogo {
   id: number;
   titulo: string;
   subtitulo: string;
-  ano: number;
+  emoji: string;
 }
 
 // URL da imagem de fundo
-const backgroundImageUri = 'https://i.pinimg.com/1200x/5c/ec/b1/5cecb16d56b8b81ebff2c70ebebd0c99.jpg';
+const backgroundImageUri = 'https://wallpapers.com/images/hd/4k-black-3840-x-2160-background-rc6l1azrlg604s51.jpg';
 
 const CatalogoScreen = () => {
   return (
-    // Usa ImageBackground no lugar de View para exibir a imagem de fundo
     <ImageBackground
       source={{ uri: backgroundImageUri }}
       style={styles.container}
     >
-      <StatusBar barStyle="dark-content" backgroundColor="#FDF0D5" />
+      <StatusBar barStyle="light-content" backgroundColor="#000" />
+      
+      {/* Envolva o conteúdo com o ScrollView */}
+      <ScrollView contentContainerStyle={styles.scrollContent}>
+        <Text style={styles.tituloPrincipal}>Minhas frases preferidas</Text>
 
-      <Text style={styles.tituloPrincipal}>Minhas músicas mais escutadas</Text>
+        {dadosDoCatalogo.map((item: ItemDoCatalogo) => (
+          <View key={item.id} style={styles.card}>
+            <Text style={styles.titulo}>{item.titulo}</Text>
+            <Text style={styles.subtitulo}>{item.subtitulo}</Text>
+            <Text style={styles.ano}>{item.emoji}</Text>
+          </View>
+        ))}
+      </ScrollView>
 
-      {dadosDoCatalogo.map((item: ItemDoCatalogo) => (
-        <View key={item.id} style={styles.card}>
-          <Text style={styles.titulo}>{item.titulo}</Text>
-          <Text style={styles.subtitulo}>{item.subtitulo}</Text>
-          <Text style={styles.ano}>{item.ano}</Text>
-        </View>
-      ))}
+      {/* Novo componente de rodapé */}
+      <View style={styles.footer}>
+        <Text style={styles.footerText}>© 2025 Feito por Mariana Meirelles</Text>
+      </View>
+
     </ImageBackground>
   );
 };
 
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
+    flex: 1, 
+  },
+  scrollContent: {
     paddingTop: 80,
     paddingHorizontal: 25,
-    // A propriedade da imagem de fundo foi removida daqui
+    // Adiciona margem na parte inferior para o rodapé.
+    paddingBottom: 70, 
   },
   tituloPrincipal: {
-  fontSize: 38, // Aumenta o tamanho da fonte para mais destaque
-  fontWeight: 'bold', // Usa um peso mais forte para o texto
-  marginBottom: 40,
-  textAlign: 'center',
-  color: '#FFFFFF', // Cor do texto branca para alto contraste
-  letterSpacing: 1.5, // Adiciona um espaçamento entre as letras para um visual mais elegante
-},
+    fontSize:65,
+    fontWeight: '900', 
+    marginBottom: 40,
+    textAlign: 'center',
+    color: '#FFFFFF',
+    letterSpacing: 1.5,
+    fontFamily: 'Montserrat',
+    fontStyle: 'italic', 
+  },
   card: {
     backgroundColor: '#FFFFFF',
     padding: 25,
@@ -67,15 +79,15 @@ const styles = StyleSheet.create({
   titulo: {
     fontSize: 22,
     fontWeight: '500',
-    color: '#780000',
-    fontFamily: 'System',
+    color: '#000000ff',
+    fontFamily: 'Montserrat',
     marginBottom: 8,
   },
   subtitulo: {
     fontSize: 16,
-    color: '#9A031E',
+    color: '#343333ff',
     marginTop: 5,
-    fontFamily: 'System',
+    fontFamily: 'Story Script',
     lineHeight: 24,
   },
   ano: {
@@ -83,6 +95,21 @@ const styles = StyleSheet.create({
     color: '#C1121F',
     marginTop: 20,
     textAlign: 'right',
+    fontFamily: 'System',
+  },
+  // Estilos do novo rodapé
+  footer: {
+    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Fundo semitransparente
+    padding: 15,
+    alignItems: 'center',
+    position: 'absolute', // Permite que ele fique fixo
+    bottom: 0,
+    left: 0,
+    right: 0,
+  },
+  footerText: {
+    color: '#FFFFFF',
+    fontSize: 14,
     fontFamily: 'System',
   },
 });

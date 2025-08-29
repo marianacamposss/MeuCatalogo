@@ -1,30 +1,38 @@
 [
   {
     "id": 1,
-    "titulo": "Numa Ilha",
-    "subtitulo": "Marina Sena",
-    "ano": 2025,
-    "imagem": "foto1"
+    "titulo": "Somos uma vez na vida.",
+    "subtitulo": "Fernando Oliveira.",
+    "emoji": "🌟"
   },
   {
     "id": 2,
-    "titulo": "O Amor Coloriu",
-    "subtitulo": "Luan Santana",
-    "ano": 2013,
-    "imagem": "foto1"
+    "titulo": "quando olhamos para o mundo exterior , estamos enxergando apenas a pequena parte dele que nos interessa . O mundo que vemos não é o Universo inteiro , mas uma parte limitada com a qual a mente se importa . No entanto , para a nossa mente , essa pequena parte do mundo é o Universo inteiro .",
+    "subtitulo": "Haemin Sunim",
+    "emoji": "🌟"
   },
   {
     "id": 3,
-    "titulo": "Dizeres Orgânico",
-    "subtitulo": "Lourena e Sant",
-    "ano": 2018,
-    "imagem": "foto1"
+    "titulo": "A vida é uma constante oscilação entre a ânsia de ter e o tédio de possuir",
+    "subtitulo": "Arthur Schopenhauer",
+    "emoji": "🌟"
   },
   {
     "id": 4,
-    "titulo": "Ainda Bem",
-    "subtitulo": "Vanessa Da Mata",
-    "ano": 2002,
-    "imagem": "foto1"
+    "titulo": "Não tente controlar as pessoas à sua volta . Você nem sequer consegue controlar a própria mente . O que o faz pensar que pode controlar os outros ?",
+    "subtitulo": "Haemin Sunim",
+    "emoji": "🌟"
+  },
+  {
+    "id": 5,
+    "titulo": "A disciplina diária constrói pontes entre onde você está e onde deseja estar.",
+    "subtitulo": "Luis Lobão",
+    "emoji": "🌟"
+  },
+   {
+    "id": 6,
+    "titulo": "A vida é uma balança entre aceitar o que não podemos mudar e ter coragem para mudar o que podemos.",
+    "subtitulo": "Autor desconhecido",
+    "emoji": "🌟"
   }
 ]
